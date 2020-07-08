@@ -2,17 +2,33 @@ import mechanicalsoup
 import json
 from random import randrange
 from random import randint
+from random import choice
 
 API_URL = 'https://api.datamuse.com/words?rel_trg='
 
-def random_case(string):
+def generate_password(string):
 	password = ''
 	for char in string:
-		case = randint(0, 1)
+		case = randint(0, 2)
 		if case == 0:
 			password += char.upper()
 		elif case == 1:
 			password += char.lower()	
+		else:
+			if char == 'a':
+				password += '@'
+			elif char == 'e':
+				password += '3'
+			elif char == 'i' or char == 'l':
+				password += choice('1!|')
+			elif char == 'o':
+				password += choice('0.')
+			elif char == 'u':
+				password += 'v'
+			elif char == 'c':
+				password += choice('<{[(')	
+			else:
+				password += char
 	return password
 
 def password_generator():
@@ -41,7 +57,7 @@ def password_generator():
 				print("Got nothing for that, try again.")
 
 	print(f"Your {i} randomly generated words were {'/'.join(password_lst)}.")
-	password = random_case(''.join(password_lst))
+	password = generate_password(''.join(password_lst))
 	print(f"Generated password: {password}\n")
 
 def main():
