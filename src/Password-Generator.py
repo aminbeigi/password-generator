@@ -23,10 +23,8 @@ def generate_password(string):
 				password += choice('1!|')
 			elif char == 'o':
 				password += choice('0.')
-			elif char == 'u':
-				password += 'v'
 			elif char == 'c':
-				password += choice('<{[(')	
+				password += choice('<(')	
 			elif char == 's':
 				password += '$'
 			else:
