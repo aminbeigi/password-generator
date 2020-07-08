@@ -6,7 +6,7 @@ from random import choice
 
 API_URL = 'https://api.datamuse.com/words?rel_trg='
 
-def generate_password(string):
+def randomizer(string):
 	password = ''
 	for char in string:
 		case = randint(0, 2)
@@ -55,7 +55,7 @@ def password_generator():
 				print("Got nothing for that, try again.")
 
 	print(f"Your {i} randomly generated words were {'/'.join(password_lst)}.")
-	password = generate_password(''.join(password_lst))
+	password = randomizer(''.join(password_lst))
 	print(f"Generated password: {password}\n")
 
 def main():
