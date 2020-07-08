@@ -11,4 +11,4 @@ Contributions are always welcome!
 Just make a [pull request](../../pulls).
 
 ## Licence
-Free to use.
+MIT license
