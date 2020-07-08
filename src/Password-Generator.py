@@ -40,12 +40,8 @@ def password_generator():
 			else:	
 				print("Got nothing for that, try again.")
 
-
 	print(f"Your {i} randomly generated words were {'/'.join(password_lst)}.")
-
-
 	password = random_case(''.join(password_lst))
-
 	print(f"Generated password: {password}\n")
 
 def main():
