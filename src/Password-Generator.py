@@ -3,14 +3,16 @@ import json
 from random import randrange
 from random import randint
 
+API_URL = 'https://api.datamuse.com/words?rel_trg='
+
 def random_case(string):
 	password = ''
 	for char in string:
 		case = randint(0, 1)
 		if case == 0:
 			password += char.upper()
-		else:
-			password += char.lower()			
+		elif case == 1:
+			password += char.lower()	
 	return password
 
 def password_generator():
@@ -20,10 +22,12 @@ def password_generator():
 	i=0
 	while (True):
 		try:
-			userinput = input("Enter keyword {}: ".format(i+1)).rstrip()
+			userinput = input(f"Enter keyword {i+1}: ").rstrip()
 			if userinput == '/' and i != 0:
 				break
-			url = 'https://api.datamuse.com/words?rel_trg={}'.format(userinput)
+
+			url = API_URL+f'{userinput}'
+
 			browser = mechanicalsoup.Browser()
 			response = browser.get(url)
 			data = json.loads(response.text)
@@ -36,9 +40,13 @@ def password_generator():
 			else:	
 				print("Got nothing for that, try again.")
 
-	print("Your {} randomly generated words were {}.".format(i+1, '/'.join(password_lst)))
+
+	print(f"Your {i} randomly generated words were {'/'.join(password_lst)}.")
+
+
 	password = random_case(''.join(password_lst))
-	print("Generated password: {}\n".format(password))
+
+	print(f"Generated password: {password}\n")
 
 def main():
 	print("### Password-Generator ###")
