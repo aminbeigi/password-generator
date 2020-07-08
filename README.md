@@ -1,6 +1,7 @@
 # Password-Generator
 ## Description
-Password-Generator will generate a random password based on user inputted keywords via Datamuse API.  
+Password-Generator will generate a random password based on user inputted keywords.   
+API used is Datamuse API.  
 
 ## Requirements
 * Python 3.6+
