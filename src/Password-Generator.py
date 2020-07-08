@@ -27,6 +27,8 @@ def generate_password(string):
 				password += 'v'
 			elif char == 'c':
 				password += choice('<{[(')	
+			elif char == 's':
+				password += '$'
 			else:
 				password += char
 	return password
@@ -41,18 +43,16 @@ def password_generator():
 			userinput = input(f"Enter keyword {i+1}: ").rstrip()
 			if userinput == '/' and i != 0:
 				break
-
 			url = API_URL+f'{userinput}'
-
 			browser = mechanicalsoup.Browser()
 			response = browser.get(url)
 			data = json.loads(response.text)
-			random_num = randrange(len(data)) # randrange throws ValueError is data = 0
+			random_num = randrange(len(data)) # randrange throws ValueError here if data = 0
 			password_lst.append(data[random_num]['word'])
 			i += 1
 		except ValueError:
 			if userinput == '/' and i == 0:
-				print("Minimum 1 keyword required.")
+				print("Minimum of 1 keyword required.")
 			else:	
 				print("Got nothing for that, try again.")
 
