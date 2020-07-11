@@ -41,7 +41,7 @@ def password_generator():
 			userinput = input(f"Enter keyword {i+1}: ").rstrip()
 			if userinput == '/' and i != 0:
 				break
-			url = API_URL+f'{userinput}'
+			url = API_URL + f'{userinput}'
 			browser = mechanicalsoup.Browser()
 			response = browser.get(url)
 			data = json.loads(response.text)
