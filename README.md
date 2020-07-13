@@ -14,5 +14,5 @@ API used is Datamuse API.
 Contributions are always welcome!  
 Just make a [pull request](../../pulls).
 
-## Licence
+## License
 MIT license
