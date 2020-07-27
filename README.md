@@ -8,7 +8,7 @@ API used is Datamuse API.
 
 ## Requirements
 * Python 3.6+
-* Install relevant packages (see Password-Generator.py)
+* Install relevant packages (see password_generator.py)
 
 ## Contributions
 Contributions are always welcome!  
