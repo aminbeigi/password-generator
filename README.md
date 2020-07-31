@@ -6,12 +6,13 @@
 <h2></h2>
 </p>
 <br />
+
 ## Description
 Password-Generator will generate a random password based on user inputted keywords.   
 API used is Datamuse API.  
 
 ## Example
-![](https://i.imgur.com/siC3Asj.png)
+<img src="https://i.imgur.com/siC3Asj.png"/>
 
 ## Requirements
 * Python 3.6+
