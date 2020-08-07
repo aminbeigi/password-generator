@@ -23,4 +23,4 @@ Contributions are always welcome!
 Just make a [pull request](../../pulls).
 
 ## Licence
-MIT license
+MIT licence
