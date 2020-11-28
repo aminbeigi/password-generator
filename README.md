@@ -6,7 +6,13 @@
 <h2></h2>
 </p>
 <br />
-    
+
+<p align="center">
+<a href="../../issues"><img src="https://img.shields.io/github/issues/aminbeigi/Password-Generator.svg?style=flat-square" /></a>
+<a href="../../pulls"><img src="https://img.shields.io/github/issues-pr/aminbeigi/Password-Generator.svg?style=flat-square" /></a>
+<img src="https://img.shields.io/github/license/aminbeigi/Password-Generator?style=flat-square">
+</p>
+
 ## Description
 Password-Generator will generate a random password based on user inputted keywords.   
 API used is Datamuse API.  
