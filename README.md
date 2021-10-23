@@ -1,6 +1,4 @@
 <p align="center">
-<img src="https://image.flaticon.com/icons/svg/3064/3064197.svg" height="96px" width="96px"/>
-<br/>
 <h3 align="center">Password Generator</h3>
 <p align="center">A random password generator.</p>
 <h2></h2>
